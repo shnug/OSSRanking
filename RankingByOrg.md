@@ -1,6 +1,6 @@
-## 按组织排名 Ranking by Orgnization
+## 按组织排名 Ranking by Organization
 
-### No Orgnization 无组织 
+### No Organization 无组织 
 - NPOI [![NuGet Version](https://img.shields.io/nuget/v/NPOI.svg?style=flat)](https://www.nuget.org/packages/NPOI/) [![NuGet](https://img.shields.io/nuget/dt/npoi)](https://www.nuget.org/packages/NPOI) ![last commit](https://img.shields.io/github/last-commit/nissl-lab/npoi/master)
 - WebSocket4Net [![NuGet Version](https://img.shields.io/nuget/v/WebSocket4Net.svg?style=flat)](https://www.nuget.org/packages/WebSocket4Net/) [![NuGet](https://img.shields.io/nuget/dt/WebSocket4Net.svg)](https://www.nuget.org/packages/WebSocket4Net) ![last commit](https://img.shields.io/github/last-commit/kerryjiang/WebSocket4Net/master)
 - Xunit.DependencyInjection [![NuGet Version](https://img.shields.io/nuget/v/Xunit.DependencyInjection.svg?style=flat)](https://www.nuget.org/packages/Xunit.DependencyInjection/) [![NuGet](https://img.shields.io/nuget/dt/Xunit.DependencyInjection)](https://www.nuget.org/packages/Xunit.DependencyInjection) <img alt="Stars" src="https://img.shields.io/github/stars/pengweiqhca/Xunit.DependencyInjection?style=flat-square&labelColor=343b41"/> [![last commit](https://img.shields.io/github/last-commit/pengweiqhca/Xunit.DependencyInjection/main)](https://github.com/pengweiqhca/Xunit.DependencyInjection)
