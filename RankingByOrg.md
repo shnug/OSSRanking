@@ -43,7 +43,7 @@
 
 ### [EleCho](https://github.com/OrgEleCho)
 - CurvaLauncher <img alt="Stars" src="https://img.shields.io/github/stars/OrgEleCho/CurvaLauncher?style=flat-square&labelColor=343b41"/> ![last commit](https://img.shields.io/github/last-commit/OrgEleCho/CurvaLauncher/main)
-- EleCho.WpfSuite <img alt="Stars" src="https://img.shields.io/github/stars/OrgEleCho/WpfSuite?style=flat-square&labelColor=343b41"/> ![last commit](https://img.shields.io/github/last-commit/OrgEleCho/WpfSuite/master)
+- EleCho.WpfSuite <img alt="Stars" src="https://img.shields.io/github/stars/OrgEleCho/EleCho.WpfSuite?style=flat-square&labelColor=343b41"/> ![last commit](https://img.shields.io/github/last-commit/OrgEleCho/EleCho.WpfSuite/master)
   
 ### [SciSharp](http://scisharpstack.org)
 - TensorFlow.NET [![NuGet Version](https://img.shields.io/nuget/v/TensorFlow.NET.svg?style=flat)](https://www.nuget.org/packages/TensorFlow.NET/) [![NuGet](https://img.shields.io/nuget/dt/TensorFlow.NET)](https://www.nuget.org/packages/TensorFlow.NET) ![SciSharp](https://img.shields.io/badge/SCISHARP-865fc3.svg) ![last commit](https://img.shields.io/github/last-commit/SciSharp/TensorFlow.NET/master)
