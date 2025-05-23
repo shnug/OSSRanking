@@ -9,6 +9,11 @@
 - 判断是否是中国开源项目的标准：主要贡献者是华人或中国人 - How to determine if it's a China OSS project: Major contributors are Chinese
 - 本列表去除了Github repo已处于archived状态的项目 - This ranking doesn't include any archived projects
 
+### 这个排名的目的 The Goal of this Ranking
+
+平息因为各种莫名其妙的原因产生的社区纷争以及排名争议，基于nuget官方下载数据的排名更有说服力
+To calm down unnecessary arguments and ranking rumors in the China .NET community. A ranking with official nuget download data is more reliable. 
+
 # 中国.NET开源项目排行榜 China .NET OSS Ranking
 
  [点击这里按组织排名 Rank by Orgnization](RankingByOrg.md)
