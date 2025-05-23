@@ -16,7 +16,7 @@ To calm down unnecessary arguments and ranking rumors in the China .NET communit
 
 # 中国.NET开源项目排行榜 China .NET OSS Ranking
 
- [点击这里按组织排名 Rank by Orgnization](RankingByOrg.md)
+[点击这里按组织排名 Rank by Orgnization](RankingByOrg.md)
  
 - NPOI [![NuGet Version](https://img.shields.io/nuget/v/NPOI.svg?style=flat)](https://www.nuget.org/packages/NPOI/) [![NuGet](https://img.shields.io/nuget/dt/npoi)](https://www.nuget.org/packages/NPOI) <img alt="Stars" src="https://img.shields.io/github/stars/nissl-lab/npoi?style=flat-square&labelColor=343b41"/> ![Downloads Per Day](https://img.shields.io/badge/downloadsPerDay-13.3k-red) ![GitHub forks](https://img.shields.io/github/forks/nissl-lab/npoi) [![last commit](https://img.shields.io/github/last-commit/nissl-lab/npoi/master)](https://github.com/nissl-lab/npoi) 
 - Xunit.DependencyInjection [![NuGet Version](https://img.shields.io/nuget/v/Xunit.DependencyInjection.svg?style=flat)](https://www.nuget.org/packages/Xunit.DependencyInjection/) [![NuGet](https://img.shields.io/nuget/dt/Xunit.DependencyInjection)](https://www.nuget.org/packages/Xunit.DependencyInjection) <img alt="Stars" src="https://img.shields.io/github/stars/pengweiqhca/Xunit.DependencyInjection?style=flat-square&labelColor=343b41"/> ![Downloads Per Day](https://img.shields.io/badge/downloadsPerDay-4.9k-red)  ![GitHub forks](https://img.shields.io/github/forks/pengweiqhca/Xunit.DependencyInjection) [![last commit](https://img.shields.io/github/last-commit/pengweiqhca/Xunit.DependencyInjection/main)](https://github.com/pengweiqhca/Xunit.DependencyInjection)
