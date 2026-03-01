@@ -1,0 +1,847 @@
+{
+  "packages": [
+    {
+      "name": "NPOI",
+      "nuget_id": "NPOI",
+      "github": "nissl-lab/npoi",
+      "branch": "master"
+    },
+    {
+      "name": "Xunit.DependencyInjection",
+      "nuget_id": "Xunit.DependencyInjection",
+      "github": "pengweiqhca/Xunit.DependencyInjection",
+      "branch": "main"
+    },
+    {
+      "name": "WebSocket4Net",
+      "nuget_id": "WebSocket4Net",
+      "github": "kerryjiang/WebSocket4Net",
+      "branch": "master"
+    },
+    {
+      "name": "EasyCaching",
+      "nuget_id": "EasyCaching.Core",
+      "github": "dotnetcore/EasyCaching",
+      "branch": "master"
+    },
+    {
+      "name": "DotNetCore.CAP",
+      "nuget_id": "DotNetCore.CAP",
+      "github": "dotnetcore/CAP",
+      "branch": "master"
+    },
+    {
+      "name": "MiniExcel",
+      "nuget_id": "MiniExcel",
+      "github": "mini-software/MiniExcel",
+      "branch": "master"
+    },
+    {
+      "name": "AspectCore Framework",
+      "nuget_id": "AspectCore.Core",
+      "github": "dotnetcore/AspectCore-Framework",
+      "branch": "master"
+    },
+    {
+      "name": "SqlSugar",
+      "nuget_id": "SqlSugarCore",
+      "github": "DotNetNext/SqlSugar",
+      "branch": "master"
+    },
+    {
+      "name": "CSRedis",
+      "nuget_id": "CSRedisCore",
+      "github": "2881099/csredis",
+      "branch": "master"
+    },
+    {
+      "name": "Netcore.MailKit",
+      "nuget_id": "NETCore.MailKit",
+      "github": "myloveCc/NETCore.MailKit",
+      "branch": "master"
+    },
+    {
+      "name": "FreeSql",
+      "nuget_id": "FreeSql",
+      "github": "dotnetcore/FreeSql",
+      "branch": "master"
+    },
+    {
+      "name": "BootstrapBlazor",
+      "nuget_id": "BootstrapBlazor",
+      "github": "dotnetcore/BootstrapBlazor",
+      "branch": "main"
+    },
+    {
+      "name": "Npoi.Mapper",
+      "nuget_id": "NPOI.Mapper",
+      "github": "donnytian/Npoi.Mapper",
+      "branch": "master"
+    },
+    {
+      "name": "SharpSnmpLib",
+      "nuget_id": "Lextm.SharpSnmpLib",
+      "github": "lextudio/sharpsnmplib",
+      "branch": "master"
+    },
+    {
+      "name": "NumSharp",
+      "nuget_id": "NumSharp",
+      "github": "SciSharp/NumSharp",
+      "branch": "master"
+    },
+    {
+      "name": "TensorFlow.NET",
+      "nuget_id": "TensorFlow.NET",
+      "github": "SciSharp/TensorFlow.NET",
+      "branch": "master"
+    },
+    {
+      "name": "Microsoft.EntityFrameworkCore.AutoHistory",
+      "nuget_id": "Microsoft.EntityFrameworkCore.AutoHistory",
+      "github": "arch/AutoHistory",
+      "branch": "master"
+    },
+    {
+      "name": "Owl.reCAPTCHA",
+      "nuget_id": "Owl.reCAPTCHA",
+      "github": "maliming/reCAPTCHA",
+      "branch": "master"
+    },
+    {
+      "name": "Furion",
+      "nuget_id": "Furion",
+      "github": "MonkSoul/Furion",
+      "branch": "v4"
+    },
+    {
+      "name": "Magicodes.IE.Core",
+      "nuget_id": "Magicodes.IE.Core",
+      "github": "dotnetcore/Magicodes.IE",
+      "branch": "master"
+    },
+    {
+      "name": "AntDesignBlazor",
+      "nuget_id": "AntDesign",
+      "github": "ant-design-blazor/ant-design-blazor",
+      "branch": "master"
+    },
+    {
+      "name": "Socket.IO client for .NET",
+      "nuget_id": "SocketIOClient",
+      "github": "doghappy/socket.io-client-csharp",
+      "branch": "master"
+    },
+    {
+      "name": "NewLife.Core",
+      "nuget_id": "NewLife.Core",
+      "github": "NewLifeX/X",
+      "branch": "master"
+    },
+    {
+      "name": "TinyVFS",
+      "nuget_id": "TinyVFS",
+      "github": "hueifeng/TinyVFS",
+      "branch": "master"
+    },
+    {
+      "name": "Microsoft.EntityFrameworkCore.UnitOfWork",
+      "nuget_id": "Microsoft.EntityFrameworkCore.UnitOfWork",
+      "github": "arch/UnitOfWork",
+      "branch": "master"
+    },
+    {
+      "name": "BeetleX",
+      "nuget_id": "BeetleX",
+      "github": "beetlex-io/BeetleX",
+      "branch": "master"
+    },
+    {
+      "name": "FreeRedis",
+      "nuget_id": "FreeRedis",
+      "github": "2881099/FreeRedis",
+      "branch": "master"
+    },
+    {
+      "name": "WTM",
+      "nuget_id": "WalkingTec.Mvvm.Core",
+      "github": "dotnetcore/WTM",
+      "branch": "dotnet6"
+    },
+    {
+      "name": "SmartSql",
+      "nuget_id": "SmartSql",
+      "github": "dotnetcore/smartsql",
+      "branch": "master"
+    },
+    {
+      "name": "Casbin.NET",
+      "nuget_id": "Casbin.NET",
+      "github": "casbin/Casbin.NET",
+      "branch": "master"
+    },
+    {
+      "name": "Snowflake.Core",
+      "nuget_id": "Snowflake.Core",
+      "github": "stulzq/snowflake-net",
+      "branch": "master"
+    },
+    {
+      "name": "Masuit.Tools",
+      "nuget_id": "Masuit.Tools.Core",
+      "github": "ldqk/Masuit.Tools",
+      "branch": "master"
+    },
+    {
+      "name": "BotSharp",
+      "nuget_id": "BotSharp.Core",
+      "github": "SciSharp/BotSharp",
+      "branch": "master"
+    },
+    {
+      "name": "MiniWord",
+      "nuget_id": "MiniWord",
+      "github": "mini-software/MiniWord",
+      "branch": "main"
+    },
+    {
+      "name": "SuperSocket",
+      "nuget_id": "SuperSocket",
+      "github": "kerryjiang/SuperSocket",
+      "branch": "master"
+    },
+    {
+      "name": "CherubNLP",
+      "nuget_id": "CherubNLP",
+      "github": "SciSharp/CherubNLP",
+      "branch": "master"
+    },
+    {
+      "name": "HslCommunication",
+      "nuget_id": "HslCommunication",
+      "github": "dathlin/HslCommunication",
+      "branch": "master"
+    },
+    {
+      "name": "XC.RSAUtil",
+      "nuget_id": "XC.RSAUtil",
+      "github": "stulzq/RSAUtil",
+      "branch": "master"
+    },
+    {
+      "name": "LLamaSharp",
+      "nuget_id": "LLamaSharp",
+      "github": "SciSharp/LLamaSharp",
+      "branch": "master"
+    },
+    {
+      "name": "WeihanLi.Common",
+      "nuget_id": "WeihanLi.Common",
+      "github": "WeihanLi/WeihanLi.Common",
+      "branch": "dev"
+    },
+    {
+      "name": "NewLife.Redis",
+      "nuget_id": "NewLife.Redis",
+      "github": "NewLifeX/NewLife.Redis",
+      "branch": "master"
+    },
+    {
+      "name": "jieba.NET",
+      "nuget_id": "jieba.NET",
+      "github": "anderscui/jieba.NET",
+      "branch": "master"
+    },
+    {
+      "name": "EntityFrameworkCore.UseRowNumberForPaging",
+      "nuget_id": "EntityFrameworkCore.UseRowNumberForPaging",
+      "github": "Rwing/EntityFrameworkCore.UseRowNumberForPaging",
+      "branch": "master"
+    },
+    {
+      "name": "HtmlTableHelper",
+      "nuget_id": "HtmlTableHelper",
+      "github": "shps951023/HtmlTableHelper",
+      "branch": "master"
+    },
+    {
+      "name": "Natasha",
+      "nuget_id": "DotNetCore.Natasha.Framework",
+      "github": "dotnetcore/Natasha",
+      "branch": "main"
+    },
+    {
+      "name": "HandyControl",
+      "nuget_id": "HandyControl",
+      "github": "HandyOrg/HandyControl",
+      "branch": "master"
+    },
+    {
+      "name": "NewLife.XCode",
+      "nuget_id": "NewLife.XCode",
+      "github": "NewLifeX/NewLife.XCode",
+      "branch": "master"
+    },
+    {
+      "name": "SKIT.FlurlHttpClient.Wechat.Api",
+      "nuget_id": "SKIT.FlurlHttpClient.Wechat.Api",
+      "github": "fudiwei/DotNetCore.SKIT.FlurlHttpClient.Wechat",
+      "branch": "main"
+    },
+    {
+      "name": "SunnyUI",
+      "nuget_id": "SunnyUI",
+      "github": "yhuse/SunnyUI",
+      "branch": "master"
+    },
+    {
+      "name": "BloomFilter",
+      "nuget_id": "BloomFilter.NetCore",
+      "github": "vla/BloomFilter.NetCore",
+      "branch": "main"
+    },
+    {
+      "name": "Rougamo.Fody",
+      "nuget_id": "Rougamo.Fody",
+      "github": "inversionhourglass/Rougamo",
+      "branch": "master"
+    },
+    {
+      "name": "FastHttpApi",
+      "nuget_id": "BeetleX.FastHttpApi",
+      "github": "beetlex-io/FastHttpApi",
+      "branch": "master"
+    },
+    {
+      "name": "Cyq.Data",
+      "nuget_id": "cyqdata",
+      "github": "cyq1162/cyqdata",
+      "branch": "master"
+    },
+    {
+      "name": "NanUI",
+      "nuget_id": "NetDimension.NanUI",
+      "github": "XuanchenLin/NanUI",
+      "branch": "master"
+    },
+    {
+      "name": "WeihanLi.Npoi",
+      "nuget_id": "WeihanLi.Npoi",
+      "github": "WeihanLi/WeihanLi.Npoi",
+      "branch": "master"
+    },
+    {
+      "name": "NewLife.Remoting",
+      "nuget_id": "NewLife.Remoting",
+      "github": "NewLifeX/NewLife.Remoting",
+      "branch": "master"
+    },
+    {
+      "name": "Panuon.UI.Silver",
+      "nuget_id": "Panuon.UI.Silver",
+      "github": "Panuon/Panuon.WPF.UI",
+      "branch": "master"
+    },
+    {
+      "name": "Aiursoft.Scanner",
+      "nuget_id": "Aiursoft.Scanner",
+      "github": "AiursoftWeb/Scanner",
+      "branch": "master"
+    },
+    {
+      "name": "PaySharp",
+      "nuget_id": "PaySharp.Core",
+      "github": "Varorbc/PaySharp",
+      "branch": "master"
+    },
+    {
+      "name": "sdmap",
+      "nuget_id": "sdmap",
+      "github": "sdcb/sdmap",
+      "branch": "master"
+    },
+    {
+      "name": "Toxy",
+      "nuget_id": "Toxy",
+      "github": "nissl-lab/Toxy",
+      "branch": "master"
+    },
+    {
+      "name": "Surging",
+      "nuget_id": "Surging",
+      "github": "fanliang11/surging",
+      "branch": "master"
+    },
+    {
+      "name": "Selenium.UndetectedChromeDriver",
+      "nuget_id": "Selenium.UndetectedChromeDriver",
+      "github": "fysh711426/UndetectedChromeDriver",
+      "branch": "master"
+    },
+    {
+      "name": "Onvif.Core",
+      "nuget_id": "Onvif.Core",
+      "github": "Jazea/Onvif.Core",
+      "branch": "master"
+    },
+    {
+      "name": "NewLife.RocketMQ",
+      "nuget_id": "NewLife.RocketMQ",
+      "github": "NewLifeX/NewLife.RocketMQ",
+      "branch": "master"
+    },
+    {
+      "name": "NPOI.Extension",
+      "nuget_id": "NPOI.Extension",
+      "github": "rigofunc/NPOI.Extension",
+      "branch": "master"
+    },
+    {
+      "name": "FluentExcel",
+      "nuget_id": "FluentExcel",
+      "github": "arch/FluentExcel",
+      "branch": "develop"
+    },
+    {
+      "name": "HZH Controls",
+      "nuget_id": "HZH_Controls",
+      "github": "kwwwvagaa/NetWinformControl",
+      "branch": "master"
+    },
+    {
+      "name": "ViewFaceCore",
+      "nuget_id": "ViewFaceCore",
+      "github": "ViewFaceCore/ViewFaceCore",
+      "branch": "main"
+    },
+    {
+      "name": "IPTools.International",
+      "nuget_id": "IPTools.International",
+      "github": "stulzq/IPTools",
+      "branch": "master"
+    },
+    {
+      "name": "NewLife.IP",
+      "nuget_id": "NewLife.IP",
+      "github": "NewLifeX/NewLife.IP",
+      "branch": "master"
+    },
+    {
+      "name": "SuperWebSocketNETServer",
+      "nuget_id": "SuperWebSocketNETServer",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "PW.Diagnostics.Runtime",
+      "nuget_id": "PW.Diagnostics.Runtime",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "AdminBlazor.Template",
+      "nuget_id": "AdminBlazor.Template",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "DPB",
+      "nuget_id": "DPB",
+      "github": "JeffreySu/WeiXinMPSDK",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SocketIO.Core",
+      "nuget_id": "SocketIO.Core",
+      "github": "doghappy/socket.io-client-csharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SocketIO.Serializer.Core",
+      "nuget_id": "SocketIO.Serializer.Core",
+      "github": "doghappy/socket.io-client-csharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SocketIO.Serializer.SystemTextJson",
+      "nuget_id": "SocketIO.Serializer.SystemTextJson",
+      "github": "doghappy/socket.io-client-csharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SocketIO.Serializer.NewtonsoftJson",
+      "nuget_id": "SocketIO.Serializer.NewtonsoftJson",
+      "github": "doghappy/socket.io-client-csharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SciSharp.TensorFlow.Redist",
+      "nuget_id": "SciSharp.TensorFlow.Redist",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SciSharp.TensorFlow.Redist-Windows-GPU",
+      "nuget_id": "SciSharp.TensorFlow.Redist-Windows-GPU",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Bigtree.Algorithm",
+      "nuget_id": "Bigtree.Algorithm",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SciSharp.TensorFlow.Redist-Linux-GPU",
+      "nuget_id": "SciSharp.TensorFlow.Redist-Linux-GPU",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Pandas.NET",
+      "nuget_id": "Pandas.NET",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SharpCV",
+      "nuget_id": "SharpCV",
+      "github": "SciSharp/SharpCV",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "BotSharp.Abstraction",
+      "nuget_id": "BotSharp.Abstraction",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Keras.NET",
+      "nuget_id": "Keras.NET",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SciSharp.TensorFlow.Redist-Linux-GPU-fragment2",
+      "nuget_id": "SciSharp.TensorFlow.Redist-Linux-GPU-fragment2",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "NETool",
+      "nuget_id": "NETool",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "HslControls",
+      "nuget_id": "HslControls",
+      "github": "dathlin/HslControlsDemo",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "OpcUaHelper",
+      "nuget_id": "OpcUaHelper",
+      "github": "dathlin/OpcUaHelper",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "PaySharp.Wechatpay",
+      "nuget_id": "PaySharp.Wechatpay",
+      "github": "Varorbc/PaySharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Hangfire.MySql.Core",
+      "nuget_id": "Hangfire.MySql.Core",
+      "github": "stulzq/Hangfire.MySql.Core",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "RSAExtensions",
+      "nuget_id": "RSAExtensions",
+      "github": "stulzq/RSAExtensions",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "XC.BouncyCastle.Crypto",
+      "nuget_id": "XC.BouncyCastle.Crypto",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "IPTools.Core",
+      "nuget_id": "IPTools.Core",
+      "github": "stulzq/IPTools",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "IP2Region.Ex",
+      "nuget_id": "IP2Region.Ex",
+      "github": "stulzq/IPTools",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "IPTools.China",
+      "nuget_id": "IPTools.China",
+      "github": "stulzq/IPTools",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "XC.Framework.Security.RSAUtil",
+      "nuget_id": "XC.Framework.Security.RSAUtil",
+      "github": "stulzq/RSAUtil",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Panda.DynamicWebApi",
+      "nuget_id": "Panda.DynamicWebApi",
+      "github": "dotnetauth/Panda.DynamicWebApi",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "NConsul",
+      "nuget_id": "NConsul",
+      "github": "stulzq/NConsul",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "ToolGood.Words.Core",
+      "nuget_id": "ToolGood.Words.Core",
+      "github": "stulzq/ToolGood.Words.Core",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "CanalSharp.Common",
+      "nuget_id": "CanalSharp.Common",
+      "github": "CanalSharp/CanalSharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "CanalSharp.Client",
+      "nuget_id": "CanalSharp.Client",
+      "github": "CanalSharp/CanalSharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "CanalSharp.Protocol",
+      "nuget_id": "CanalSharp.Protocol",
+      "github": "CanalSharp/CanalSharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Unicorn.AspNetCore",
+      "nuget_id": "Unicorn.AspNetCore",
+      "github": "UCPlan/Unicorn",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "cyqdatacore",
+      "nuget_id": "cyqdatacore",
+      "github": "cyq1162/cyqdata",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Taurus.MVC",
+      "nuget_id": "Taurus.MVC",
+      "github": "cyq1162/Taurus.MVC",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "dotnet-execute",
+      "nuget_id": "dotnet-execute",
+      "github": "WeihanLi/dotnet-exec",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.Redis",
+      "nuget_id": "WeihanLi.Redis",
+      "github": "WeihanLi/WeihanLi.Redis",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "dotnet-httpie",
+      "nuget_id": "dotnet-httpie",
+      "github": "WeihanLi/dotnet-httpie",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.EntityFramework",
+      "nuget_id": "WeihanLi.EntityFramework",
+      "github": "WeihanLi/WeihanLi.EntityFramework",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.Data",
+      "nuget_id": "WeihanLi.Data",
+      "github": "WeihanLi/WeihanLi.Common",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.AspNetMvc.AccessControlHelper",
+      "nuget_id": "WeihanLi.AspNetMvc.AccessControlHelper",
+      "github": "WeihanLi/AccessControlHelper",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "ReferenceResolver",
+      "nuget_id": "ReferenceResolver",
+      "github": "WeihanLi/dotnet-exec",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.Web.Extensions",
+      "nuget_id": "WeihanLi.Web.Extensions",
+      "github": "WeihanLi/WeihanLi.Web.Extensions",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "DbTool.Core",
+      "nuget_id": "DbTool.Core",
+      "github": "WeihanLi/DbTool.Packages",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.Templates.Library",
+      "nuget_id": "WeihanLi.Templates.Library",
+      "github": "WeihanLi/WeihanLi.Templates",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Casbin.AspNetCore",
+      "nuget_id": "Casbin.AspNetCore",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Owl.TokenWildcardIssuerValidator",
+      "nuget_id": "Owl.TokenWildcardIssuerValidator",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    }
+  ],
+  "nuget_owners": [
+    "nissl-lab",
+    "kerryjiang",
+    "pengweiqhca",
+    "2881099",
+    "myloveCc",
+    "donnytian",
+    "lextudio",
+    "doghappy",
+    "SciSharp",
+    "dotnetcore",
+    "mini-software",
+    "DotNetNext",
+    "MonkSoul",
+    "HandyOrg",
+    "yhuse",
+    "XuanchenLin",
+    "NewLifeX",
+    "ant-design-blazor",
+    "sdcb",
+    "dathlin",
+    "beetlex-io",
+    "Varorbc",
+    "anderscui",
+    "hueifeng",
+    "stulzq",
+    "Rwing",
+    "shps951023",
+    "inversionhourglass",
+    "cyq1162",
+    "fanliang11",
+    "fysh711426",
+    "Jazea",
+    "ViewFaceCore",
+    "vla",
+    "WeihanLi",
+    "fudiwei",
+    "ldqk",
+    "casbin",
+    "kwwwvagaa",
+    "Panuon",
+    "maliming",
+    "rigofunc",
+    "aiursoft",
+    "arch",
+    "AiursoftWeb"
+  ],
+  "github_orgs": [
+    "dotnetcore",
+    "SciSharp",
+    "NewLifeX",
+    "mini-software",
+    "masastack",
+    "ant-design-blazor",
+    "beetlex-io",
+    "HandyOrg",
+    "DotNetNext",
+    "arch",
+    "ViewFaceCore",
+    "AiursoftWeb",
+    "Jazea",
+    "Panuon",
+    "casbin"
+  ],
+  "excluded_nuget_ids": [
+    "BlazorComponent",
+    "PaySharp.Alipay"
+  ],
+  "excluded_nuget_id_prefixes": [
+    "Alipay.",
+    "Com.Ctrip.",
+    "Masa.",
+    "Senparc."
+  ]
+}
