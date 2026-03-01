@@ -1,7 +1,3 @@
-### 社群 Online Social
-
-微信群：[加群通道](https://github.com/dotnet-cn/jobs/issues/13)
-
 ### 说明 Notes：
 - 本排名只统计nuget下载量大于2万的package - This ranking only includes projects which have 20k nuget download at least
 - 本排名是按照nuget下载量降序排列 - This ranking ordered in descending by nuget download number
