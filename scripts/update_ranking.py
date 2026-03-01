@@ -158,6 +158,41 @@ def is_chinese_project(github_repo: str, token: str) -> bool:
     return False
 
 
+def select_major_packages(candidates: list, tracked_ids: set) -> list:
+    """
+    From *candidates*, return only packages that are not sub-packages of any
+    already-tracked package or of another candidate in the same batch.
+
+    A package X is a sub-package of Y when X's NuGet ID starts with Y's NuGet
+    ID followed by a period '.' (case-insensitive).  For example,
+    'FreeSql.Provider.MySql' is a sub-package of 'FreeSql', and
+    'Xunit.DependencyInjection.Logging' is a sub-package of
+    'Xunit.DependencyInjection'.
+
+    Precondition: *tracked_ids* must contain lower-cased IDs (as produced by
+    ``{p["nuget_id"].lower() for p in tracked}``).
+    """
+    # Combine already-tracked IDs with all candidate IDs so that a parent package
+    # discovered in the same batch can still suppress its children.
+    all_ids_lower: set = set(tracked_ids)  # already lower-cased
+    for p in candidates:
+        all_ids_lower.add(p["nuget_id"].lower())
+
+    result = []
+    for pkg in candidates:
+        lower_id = pkg["nuget_id"].lower()
+        is_sub = any(
+            lower_id.startswith(parent_id + ".")
+            for parent_id in all_ids_lower
+            if parent_id != lower_id
+        )
+        if is_sub:
+            print(f"    SKIP (sub-package): {pkg['nuget_id']}")
+        else:
+            result.append(pkg)
+    return result
+
+
 # Shields.io badge org labels (github org -> badge markdown)
 ORG_BADGES = {
     "dotnetcore": "![.NET Core Community](https://img.shields.io/badge/NCC-9e20c9.svg)",
@@ -338,7 +373,11 @@ def main() -> None:
     # 2. Discover new packages from known NuGet owners                    #
     # ------------------------------------------------------------------ #
     print("\nSearching NuGet for new packages from known owners …")
-    newly_added: list = []
+    # Collect all qualifying candidates first; sub-package filtering is applied
+    # after all owners have been scanned so that a parent package discovered later
+    # in the same run can still suppress its children.
+    new_candidates: list = []
+    candidate_ids_lower: set = set()  # dedup across owners within this run
 
     for owner in config.get("nuget_owners", []):
         print(f"  Scanning owner: {owner}")
@@ -346,7 +385,7 @@ def main() -> None:
         for pkg_data in results:
             pid = pkg_data.get("id", "")
             downloads = pkg_data.get("totalDownloads", 0)
-            if pid.lower() in tracked_lower:
+            if pid.lower() in tracked_lower or pid.lower() in candidate_ids_lower:
                 continue
             if downloads < MIN_DOWNLOADS:
                 continue
@@ -360,7 +399,7 @@ def main() -> None:
             if github_repo:
                 if not is_chinese_project(github_repo, github_token):
                     print(
-                        f"    SKIP: {pid} – no Chinese top contributor found "
+                        f"    SKIP (not Chinese): {pid} – no Chinese top contributor found "
                         f"(repo: {github_repo})"
                     )
                     continue
@@ -379,10 +418,20 @@ def main() -> None:
                 "auto_detected": True,
                 "total_downloads": downloads,
             }
-            tracked.append(new_entry)
-            tracked_lower.add(pid.lower())
-            newly_added.append(new_entry)
-            print(f"    NEW: {pid} ({downloads:,} downloads)")
+            new_candidates.append(new_entry)
+            candidate_ids_lower.add(pid.lower())
+
+    # Filter out sub-packages; only major (root) packages enter the ranking.
+    # A package X is a sub-package of Y when X's ID starts with Y's ID + '.'
+    # e.g. 'FreeSql.Provider.MySql' is a sub-package of already-tracked 'FreeSql'.
+    new_candidates = select_major_packages(new_candidates, tracked_lower)
+
+    newly_added: list = []
+    for entry in new_candidates:
+        tracked.append(entry)
+        tracked_lower.add(entry["nuget_id"].lower())
+        newly_added.append(entry)
+        print(f"    NEW: {entry['nuget_id']} ({entry['total_downloads']:,} downloads)")
 
     # ------------------------------------------------------------------ #
     # 3. Persist updated projects.json                                    #
