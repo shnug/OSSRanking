@@ -437,6 +437,1154 @@
       "nuget_id": "NewLife.IP",
       "github": "NewLifeX/NewLife.IP",
       "branch": "master"
+    },
+    {
+      "name": "SuperWebSocketNETServer",
+      "nuget_id": "SuperWebSocketNETServer",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Com.Ctrip.Framework.Apollo",
+      "nuget_id": "Com.Ctrip.Framework.Apollo",
+      "github": "apolloconfig/apollo.net",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "PW.Diagnostics.Runtime",
+      "nuget_id": "PW.Diagnostics.Runtime",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "AdminBlazor.Template",
+      "nuget_id": "AdminBlazor.Template",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Senparc.CO2NET",
+      "nuget_id": "Senparc.CO2NET",
+      "github": "Senparc/Senparc.CO2NET",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Senparc.NeuChar",
+      "nuget_id": "Senparc.NeuChar",
+      "github": "Senparc/NeuChar",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Senparc.WebSocket",
+      "nuget_id": "Senparc.WebSocket",
+      "github": "JeffreySu/WeiXinMPSDK",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Senparc.Xncf.XncfBuilder.Template",
+      "nuget_id": "Senparc.Xncf.XncfBuilder.Template",
+      "github": "NeuCharFramework/NcfPackageSources",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Senparc.NCF.Template",
+      "nuget_id": "Senparc.NCF.Template",
+      "github": "NeuCharFramework/NCF",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "DPB",
+      "nuget_id": "DPB",
+      "github": "JeffreySu/WeiXinMPSDK",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Senparc.AI",
+      "nuget_id": "Senparc.AI",
+      "github": "Senparc/Senparc.AI",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Senparc.Xncf.PromptRange",
+      "nuget_id": "Senparc.Xncf.PromptRange",
+      "github": "NeuCharFramework/NcfPackageSources",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SocketIO.Core",
+      "nuget_id": "SocketIO.Core",
+      "github": "doghappy/socket.io-client-csharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SocketIO.Serializer.Core",
+      "nuget_id": "SocketIO.Serializer.Core",
+      "github": "doghappy/socket.io-client-csharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SocketIO.Serializer.SystemTextJson",
+      "nuget_id": "SocketIO.Serializer.SystemTextJson",
+      "github": "doghappy/socket.io-client-csharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SocketIO.Serializer.NewtonsoftJson",
+      "nuget_id": "SocketIO.Serializer.NewtonsoftJson",
+      "github": "doghappy/socket.io-client-csharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "BlazorComponent",
+      "nuget_id": "BlazorComponent",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Dispatcher.Events",
+      "nuget_id": "Masa.BuildingBlocks.Dispatcher.Events",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Dispatcher.IntegrationEvents",
+      "nuget_id": "Masa.BuildingBlocks.Dispatcher.IntegrationEvents",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Template",
+      "nuget_id": "Masa.Template",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Ddd.Domain",
+      "nuget_id": "Masa.BuildingBlocks.Ddd.Domain",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Models.Config",
+      "nuget_id": "Masa.Utils.Models.Config",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Data",
+      "nuget_id": "Masa.BuildingBlocks.Data",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Configuration",
+      "nuget_id": "Masa.BuildingBlocks.Configuration",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Configuration",
+      "nuget_id": "Masa.Contrib.Configuration",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Dispatcher.Events",
+      "nuget_id": "Masa.Contrib.Dispatcher.Events",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Stack.Components",
+      "nuget_id": "Masa.Stack.Components",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Caching.Memory",
+      "nuget_id": "Masa.Utils.Caching.Memory",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Extensions.DependencyInjection",
+      "nuget_id": "Masa.Utils.Extensions.DependencyInjection",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Service.MinimalAPIs",
+      "nuget_id": "Masa.Contrib.Service.MinimalAPIs",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Ddd.Domain",
+      "nuget_id": "Masa.Contrib.Ddd.Domain",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Extensions.DotNet",
+      "nuget_id": "Masa.Utils.Extensions.DotNet",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Service.MinimalAPIs",
+      "nuget_id": "Masa.BuildingBlocks.Service.MinimalAPIs",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.ReadWriteSpliting.Cqrs",
+      "nuget_id": "Masa.BuildingBlocks.ReadWriteSpliting.Cqrs",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Authentication.Identity",
+      "nuget_id": "Masa.BuildingBlocks.Authentication.Identity",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Extensions.Expressions",
+      "nuget_id": "Masa.Utils.Extensions.Expressions",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Configuration.Json",
+      "nuget_id": "Masa.Utils.Configuration.Json",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Isolation",
+      "nuget_id": "Masa.BuildingBlocks.Isolation",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Security.Cryptography",
+      "nuget_id": "Masa.Utils.Security.Cryptography",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Exceptions",
+      "nuget_id": "Masa.BuildingBlocks.Exceptions",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Globalization.I18n",
+      "nuget_id": "Masa.BuildingBlocks.Globalization.I18n",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.ReadWriteSplitting.Cqrs",
+      "nuget_id": "Masa.BuildingBlocks.ReadWriteSplitting.Cqrs",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Service.Caller",
+      "nuget_id": "Masa.BuildingBlocks.Service.Caller",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Caching.Core",
+      "nuget_id": "Masa.Utils.Caching.Core",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.ReadWriteSpliting.Cqrs",
+      "nuget_id": "Masa.Contrib.ReadWriteSpliting.Cqrs",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.UoW.EF",
+      "nuget_id": "Masa.Contrib.Data.UoW.EF",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Exceptions",
+      "nuget_id": "Masa.Utils.Exceptions",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Caching",
+      "nuget_id": "Masa.BuildingBlocks.Caching",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.BasicAbility.Dcc",
+      "nuget_id": "Masa.Contrib.BasicAbility.Dcc",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Data.DataAnnotations",
+      "nuget_id": "Masa.Utils.Data.DataAnnotations",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Caching.Distributed.StackExchangeRedis",
+      "nuget_id": "Masa.Contrib.Caching.Distributed.StackExchangeRedis",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.Serialization.Json",
+      "nuget_id": "Masa.Contrib.Data.Serialization.Json",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Caching.MultilevelCache",
+      "nuget_id": "Masa.Contrib.Caching.MultilevelCache",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Storage.ObjectStorage.Aliyun",
+      "nuget_id": "Masa.Contrib.Storage.ObjectStorage.Aliyun",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.Serialization.Yaml",
+      "nuget_id": "Masa.Contrib.Data.Serialization.Yaml",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.StackSdks.Auth",
+      "nuget_id": "Masa.Contrib.StackSdks.Auth",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.SearchEngine.AutoComplete",
+      "nuget_id": "Masa.BuildingBlocks.SearchEngine.AutoComplete",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.EFCore",
+      "nuget_id": "Masa.Contrib.Data.EFCore",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Caller.Core",
+      "nuget_id": "Masa.Utils.Caller.Core",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Dispatcher.IntegrationEvents",
+      "nuget_id": "Masa.Contrib.Dispatcher.IntegrationEvents",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.StackSdks.Auth",
+      "nuget_id": "Masa.BuildingBlocks.StackSdks.Auth",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Extensions.Enums",
+      "nuget_id": "Masa.Utils.Extensions.Enums",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.StackSdks.Mc",
+      "nuget_id": "Masa.BuildingBlocks.StackSdks.Mc",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Storage.ObjectStorage",
+      "nuget_id": "Masa.BuildingBlocks.Storage.ObjectStorage",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.UoW.EFCore",
+      "nuget_id": "Masa.Contrib.Data.UoW.EFCore",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.StackSdks.Pm",
+      "nuget_id": "Masa.BuildingBlocks.StackSdks.Pm",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Isolation",
+      "nuget_id": "Masa.Contrib.Isolation",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.StackSdks.Config",
+      "nuget_id": "Masa.BuildingBlocks.StackSdks.Config",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.StackSdks.Mc",
+      "nuget_id": "Masa.Contrib.StackSdks.Mc",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Data.Elasticsearch",
+      "nuget_id": "Masa.Utils.Data.Elasticsearch",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Authentication.Identity",
+      "nuget_id": "Masa.Contrib.Authentication.Identity",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Authentication.OpenIdConnect.Models",
+      "nuget_id": "Masa.BuildingBlocks.Authentication.OpenIdConnect.Models",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Development.DaprStarter",
+      "nuget_id": "Masa.Contrib.Development.DaprStarter",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Caching.Redis",
+      "nuget_id": "Masa.Utils.Caching.Redis",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.Mapping.Mapster",
+      "nuget_id": "Masa.Contrib.Data.Mapping.Mapster",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Development.DaprStarter",
+      "nuget_id": "Masa.BuildingBlocks.Development.DaprStarter",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.ReadWriteSpliting.EventSourcing",
+      "nuget_id": "Masa.BuildingBlocks.ReadWriteSpliting.EventSourcing",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.StackSdks.Pm",
+      "nuget_id": "Masa.Contrib.StackSdks.Pm",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.StackSdks.Tsc",
+      "nuget_id": "Masa.Contrib.StackSdks.Tsc",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.SearchEngine.AutoComplete.ElasticSearch",
+      "nuget_id": "Masa.Contrib.SearchEngine.AutoComplete.ElasticSearch",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Data.EntityFrameworkCore",
+      "nuget_id": "Masa.Utils.Data.EntityFrameworkCore",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.StackSdks.Tsc",
+      "nuget_id": "Masa.BuildingBlocks.StackSdks.Tsc",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Exceptions",
+      "nuget_id": "Masa.Contrib.Exceptions",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.StackSdks.Config",
+      "nuget_id": "Masa.Contrib.StackSdks.Config",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.Contracts",
+      "nuget_id": "Masa.Contrib.Data.Contracts",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Caching.DistributedMemory",
+      "nuget_id": "Masa.Utils.Caching.DistributedMemory",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.StackSdks.Caller",
+      "nuget_id": "Masa.Contrib.StackSdks.Caller",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.DistributedLock.Medallion",
+      "nuget_id": "Masa.Contrib.Data.DistributedLock.Medallion",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Caller.HttpClient",
+      "nuget_id": "Masa.Utils.Caller.HttpClient",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.ReadWriteSplitting.Cqrs",
+      "nuget_id": "Masa.Contrib.ReadWriteSplitting.Cqrs",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.StackSdks.Dcc",
+      "nuget_id": "Masa.Contrib.StackSdks.Dcc",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.StackSdks.Scheduler",
+      "nuget_id": "Masa.BuildingBlocks.StackSdks.Scheduler",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.StackSdks.Dcc",
+      "nuget_id": "Masa.BuildingBlocks.StackSdks.Dcc",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Extensions.BackgroundJobs",
+      "nuget_id": "Masa.BuildingBlocks.Extensions.BackgroundJobs",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.StackSdks.Scheduler",
+      "nuget_id": "Masa.Contrib.StackSdks.Scheduler",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Security.Token",
+      "nuget_id": "Masa.Utils.Security.Token",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Extensions.Validations.FluentValidation",
+      "nuget_id": "Masa.Utils.Extensions.Validations.FluentValidation",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Globalization.I18n",
+      "nuget_id": "Masa.Contrib.Globalization.I18n",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.StackSdks.Isolation",
+      "nuget_id": "Masa.BuildingBlocks.StackSdks.Isolation",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.IdGenerator.SequentialGuid",
+      "nuget_id": "Masa.Contrib.Data.IdGenerator.SequentialGuid",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Caller.DaprClient",
+      "nuget_id": "Masa.Utils.Caller.DaprClient",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Service.Contracts",
+      "nuget_id": "Masa.BuildingBlocks.Service.Contracts",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Configuration.Dcc",
+      "nuget_id": "Masa.Utils.Configuration.Dcc",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Authentication.OpenIdConnect.Cache",
+      "nuget_id": "Masa.BuildingBlocks.Authentication.OpenIdConnect.Cache",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Authentication.OpenIdConnect.Domain",
+      "nuget_id": "Masa.BuildingBlocks.Authentication.OpenIdConnect.Domain",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Ldap.Novell",
+      "nuget_id": "Masa.Utils.Ldap.Novell",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.StackSdks.Isolation",
+      "nuget_id": "Masa.Contrib.StackSdks.Isolation",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.IdGenerator.Snowflake",
+      "nuget_id": "Masa.Contrib.Data.IdGenerator.Snowflake",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.StackSdks.Middleware",
+      "nuget_id": "Masa.BuildingBlocks.StackSdks.Middleware",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.DistributedLock.Local",
+      "nuget_id": "Masa.Contrib.Data.DistributedLock.Local",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Development.Dapr",
+      "nuget_id": "Masa.Utils.Development.Dapr",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Data.IdGenerator.NormalGuid",
+      "nuget_id": "Masa.Contrib.Data.IdGenerator.NormalGuid",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Authentication.OpenIdConnect.EFCore",
+      "nuget_id": "Masa.Contrib.Authentication.OpenIdConnect.EFCore",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Data.Prometheus",
+      "nuget_id": "Masa.Utils.Data.Prometheus",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Authentication.OpenIdConnect.Cache",
+      "nuget_id": "Masa.Contrib.Authentication.OpenIdConnect.Cache",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.StackSdks.Middleware",
+      "nuget_id": "Masa.Contrib.StackSdks.Middleware",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Utils.Enums",
+      "nuget_id": "Masa.Utils.Enums",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.BuildingBlocks.Authentication.OpenIdConnect.Storage",
+      "nuget_id": "Masa.BuildingBlocks.Authentication.OpenIdConnect.Storage",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Masa.Contrib.Service.Caller",
+      "nuget_id": "Masa.Contrib.Service.Caller",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SciSharp.TensorFlow.Redist",
+      "nuget_id": "SciSharp.TensorFlow.Redist",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SciSharp.TensorFlow.Redist-Windows-GPU",
+      "nuget_id": "SciSharp.TensorFlow.Redist-Windows-GPU",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Bigtree.Algorithm",
+      "nuget_id": "Bigtree.Algorithm",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SciSharp.TensorFlow.Redist-Linux-GPU",
+      "nuget_id": "SciSharp.TensorFlow.Redist-Linux-GPU",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Pandas.NET",
+      "nuget_id": "Pandas.NET",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SharpCV",
+      "nuget_id": "SharpCV",
+      "github": "SciSharp/SharpCV",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "BotSharp.Abstraction",
+      "nuget_id": "BotSharp.Abstraction",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Keras.NET",
+      "nuget_id": "Keras.NET",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "SciSharp.TensorFlow.Redist-Linux-GPU-fragment2",
+      "nuget_id": "SciSharp.TensorFlow.Redist-Linux-GPU-fragment2",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "NETool",
+      "nuget_id": "NETool",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "HslControls",
+      "nuget_id": "HslControls",
+      "github": "dathlin/HslControlsDemo",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "OpcUaHelper",
+      "nuget_id": "OpcUaHelper",
+      "github": "dathlin/OpcUaHelper",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "PaySharp.Wechatpay",
+      "nuget_id": "PaySharp.Wechatpay",
+      "github": "Varorbc/PaySharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "PaySharp.Alipay",
+      "nuget_id": "PaySharp.Alipay",
+      "github": "Varorbc/PaySharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Hangfire.MySql.Core",
+      "nuget_id": "Hangfire.MySql.Core",
+      "github": "stulzq/Hangfire.MySql.Core",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "RSAExtensions",
+      "nuget_id": "RSAExtensions",
+      "github": "stulzq/RSAExtensions",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "XC.BouncyCastle.Crypto",
+      "nuget_id": "XC.BouncyCastle.Crypto",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "IPTools.Core",
+      "nuget_id": "IPTools.Core",
+      "github": "stulzq/IPTools",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "IP2Region.Ex",
+      "nuget_id": "IP2Region.Ex",
+      "github": "stulzq/IPTools",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "IPTools.China",
+      "nuget_id": "IPTools.China",
+      "github": "stulzq/IPTools",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Alipay.AopSdk.Core",
+      "nuget_id": "Alipay.AopSdk.Core",
+      "github": "stulzq/Alipay.AopSdk.Core",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "XC.Framework.Security.RSAUtil",
+      "nuget_id": "XC.Framework.Security.RSAUtil",
+      "github": "stulzq/RSAUtil",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Panda.DynamicWebApi",
+      "nuget_id": "Panda.DynamicWebApi",
+      "github": "dotnetauth/Panda.DynamicWebApi",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "NConsul",
+      "nuget_id": "NConsul",
+      "github": "stulzq/NConsul",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Alipay.AopSdk.AspnetCore",
+      "nuget_id": "Alipay.AopSdk.AspnetCore",
+      "github": "stulzq/Alipay.AopSdk.Core",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "ToolGood.Words.Core",
+      "nuget_id": "ToolGood.Words.Core",
+      "github": "stulzq/ToolGood.Words.Core",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "CanalSharp.Common",
+      "nuget_id": "CanalSharp.Common",
+      "github": "CanalSharp/CanalSharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "CanalSharp.Client",
+      "nuget_id": "CanalSharp.Client",
+      "github": "CanalSharp/CanalSharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "CanalSharp.Protocol",
+      "nuget_id": "CanalSharp.Protocol",
+      "github": "CanalSharp/CanalSharp",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Unicorn.AspNetCore",
+      "nuget_id": "Unicorn.AspNetCore",
+      "github": "UCPlan/Unicorn",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Alipay.AopSdk.F2FPay",
+      "nuget_id": "Alipay.AopSdk.F2FPay",
+      "github": "stulzq/Alipay.AopSdk.Core",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "cyqdatacore",
+      "nuget_id": "cyqdatacore",
+      "github": "cyq1162/cyqdata",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Taurus.MVC",
+      "nuget_id": "Taurus.MVC",
+      "github": "cyq1162/Taurus.MVC",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "dotnet-execute",
+      "nuget_id": "dotnet-execute",
+      "github": "WeihanLi/dotnet-exec",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.Redis",
+      "nuget_id": "WeihanLi.Redis",
+      "github": "WeihanLi/WeihanLi.Redis",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "dotnet-httpie",
+      "nuget_id": "dotnet-httpie",
+      "github": "WeihanLi/dotnet-httpie",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.EntityFramework",
+      "nuget_id": "WeihanLi.EntityFramework",
+      "github": "WeihanLi/WeihanLi.EntityFramework",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.Data",
+      "nuget_id": "WeihanLi.Data",
+      "github": "WeihanLi/WeihanLi.Common",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.AspNetMvc.AccessControlHelper",
+      "nuget_id": "WeihanLi.AspNetMvc.AccessControlHelper",
+      "github": "WeihanLi/AccessControlHelper",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "ReferenceResolver",
+      "nuget_id": "ReferenceResolver",
+      "github": "WeihanLi/dotnet-exec",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.Web.Extensions",
+      "nuget_id": "WeihanLi.Web.Extensions",
+      "github": "WeihanLi/WeihanLi.Web.Extensions",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "DbTool.Core",
+      "nuget_id": "DbTool.Core",
+      "github": "WeihanLi/DbTool.Packages",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "WeihanLi.Templates.Library",
+      "nuget_id": "WeihanLi.Templates.Library",
+      "github": "WeihanLi/WeihanLi.Templates",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Casbin.AspNetCore",
+      "nuget_id": "Casbin.AspNetCore",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
+    },
+    {
+      "name": "Owl.TokenWildcardIssuerValidator",
+      "nuget_id": "Owl.TokenWildcardIssuerValidator",
+      "github": "",
+      "branch": "master",
+      "auto_detected": true
     }
   ],
   "nuget_owners": [
