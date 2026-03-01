@@ -25,6 +25,8 @@ jobs:
         run: pip install requests
 
       - name: Run ranking update script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/update_ranking.py
 
       - name: Commit and push changes

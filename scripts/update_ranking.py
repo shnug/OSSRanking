@@ -6,11 +6,19 @@ This script:
 1. Reads projects.json to get currently tracked packages and known Chinese NuGet owners.
 2. Queries the NuGet Search API to discover new packages published by known owners
    that have at least MIN_DOWNLOADS total downloads.
-3. Appends any newly discovered packages to projects.json.
-4. Regenerates the README.md ranking section, sorted by total NuGet downloads (descending).
+3. For each newly discovered package, uses the GitHub API to verify that the top 1
+   or top 2 contributor is located in China (including Taiwan and Hong Kong).
+4. Appends any qualifying packages to projects.json.
+5. Regenerates the README.md ranking section, sorted by total NuGet downloads (descending).
+
+Environment variables:
+  GITHUB_TOKEN  – Personal access token (or Actions token) used for GitHub API calls.
+                  Without this the script still works but is subject to the lower
+                  unauthenticated rate limit (60 req/h).
 """
 
 import json
+import os
 import re
 import sys
 import time
@@ -26,8 +34,131 @@ except ImportError:
 MIN_DOWNLOADS = 20_000
 
 NUGET_SEARCH_URL = "https://azuresearch-usnc.nuget.org/query"
+GITHUB_API_BASE = "https://api.github.com"
 
-# Shields.io badge org labels (nuget_id -> badge label+colour)
+# Location keywords indicating a user is based in China, Taiwan, or Hong Kong.
+# Matched as case-insensitive substrings of the GitHub profile "location" field.
+CHINESE_LOCATION_KEYWORDS = {
+    # Countries / regions
+    "china", "中国",
+    "taiwan", "台湾", "台灣",
+    "hong kong", "hongkong", "香港",
+    "prc",
+    # Major mainland cities
+    "beijing", "北京",
+    "shanghai", "上海",
+    "shenzhen", "深圳",
+    "guangzhou", "广州",
+    "chengdu", "成都",
+    "hangzhou", "杭州",
+    "wuhan", "武汉",
+    "nanjing", "南京",
+    "tianjin", "天津",
+    "xian", "西安",
+    "suzhou", "苏州",
+    "chongqing", "重庆",
+    "zhengzhou", "郑州",
+    "qingdao", "青岛",
+    "ningbo", "宁波",
+    # Taiwan cities
+    "taipei", "台北",
+}
+
+# Seconds to wait between GitHub user-profile API calls to respect secondary rate limits.
+# GitHub's secondary rate limit triggers at ~60-90 requests/minute for authenticated users.
+GITHUB_API_DELAY_BETWEEN_USERS = 1.0
+# Seconds to wait between checking different repos.
+GITHUB_API_DELAY_BETWEEN_REPOS = 0.2
+
+
+def extract_github_repo(url: str) -> str:
+    """Extract 'owner/repo' from a GitHub URL, or return '' if not a GitHub URL."""
+    if not url:
+        return ""
+    m = re.match(r"https?://github\.com/([^/]+/[^/?#\s]+)", url, re.IGNORECASE)
+    if m:
+        return m.group(1).rstrip("/").removesuffix(".git")
+    return ""
+
+
+def is_location_chinese(location: str) -> bool:
+    """Return True if *location* indicates China (including Taiwan and Hong Kong)."""
+    if not location:
+        return False
+    loc_lower = location.lower()
+    return any(kw in loc_lower for kw in CHINESE_LOCATION_KEYWORDS)
+
+
+def get_top_contributors(github_repo: str, token: str, n: int = 2) -> list:
+    """
+    Return the login names of the top *n* non-bot contributors for *github_repo*.
+    Returns an empty list on any error.
+    """
+    headers = {"Accept": "application/vnd.github+json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    try:
+        resp = requests.get(
+            f"{GITHUB_API_BASE}/repos/{github_repo}/contributors",
+            headers=headers,
+            params={"per_page": n + 5, "anon": "false"},
+            timeout=15,
+        )
+        resp.raise_for_status()
+        logins = [
+            c["login"]
+            for c in resp.json()
+            if c.get("type") != "Bot" and not c.get("login", "").endswith("[bot]")
+        ]
+        return logins[:n]
+    except Exception as exc:
+        print(f"  Warning: could not fetch contributors for {github_repo}: {exc}", file=sys.stderr)
+        return []
+
+
+def get_user_location(username: str, token: str) -> str:
+    """Return the GitHub user's self-reported location string, or '' on failure."""
+    headers = {"Accept": "application/vnd.github+json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    try:
+        resp = requests.get(
+            f"{GITHUB_API_BASE}/users/{username}",
+            headers=headers,
+            timeout=15,
+        )
+        resp.raise_for_status()
+        return resp.json().get("location") or ""
+    except Exception as exc:
+        print(f"  Warning: could not fetch profile for {username}: {exc}", file=sys.stderr)
+        return ""
+
+
+def is_chinese_project(github_repo: str, token: str) -> bool:
+    """
+    Return True if the top 1 or top 2 contributor of *github_repo* is located in
+    China (including Taiwan and Hong Kong).
+
+    Conservative fallback: returns True (i.e., does not filter out the package)
+    when the GitHub API is unreachable or contributor data is unavailable, to
+    avoid false negatives caused by transient errors.
+    """
+    if not github_repo:
+        # No GitHub URL yet – cannot verify; leave for manual review.
+        return True
+    contributors = get_top_contributors(github_repo, token)
+    if not contributors:
+        # Could not retrieve contributors; keep conservatively.
+        return True
+    for login in contributors:
+        location = get_user_location(login, token)
+        if is_location_chinese(location):
+            return True
+        time.sleep(GITHUB_API_DELAY_BETWEEN_USERS)  # respect GitHub secondary rate limit
+    return False
+
+
+# Shields.io badge org labels (github org -> badge markdown)
 ORG_BADGES = {
     "dotnetcore": "![.NET Core Community](https://img.shields.io/badge/NCC-9e20c9.svg)",
     "SciSharp": "![SciSharp](https://img.shields.io/badge/SCISHARP-865fc3.svg)",
@@ -179,6 +310,14 @@ def main() -> None:
     projects_path = root / "projects.json"
     readme_path = root / "README.md"
 
+    github_token: str = os.environ.get("GITHUB_TOKEN", "")
+    if not github_token:
+        print(
+            "Warning: GITHUB_TOKEN is not set. GitHub API calls will use the lower "
+            "unauthenticated rate limit (60 req/h).",
+            file=sys.stderr,
+        )
+
     with open(projects_path, encoding="utf-8") as f:
         config = json.load(f)
 
@@ -211,15 +350,31 @@ def main() -> None:
                 continue
             if downloads < MIN_DOWNLOADS:
                 continue
-            # Build a minimal entry; GitHub URL is unknown until manually verified.
+
+            # Try to derive the GitHub repo from the NuGet package metadata so we
+            # can verify that the project has a Chinese top contributor.
+            project_url = pkg_data.get("projectUrl", "") or ""
+            github_repo = extract_github_repo(project_url)
+
+            # Skip packages whose top 1/2 contributors are not located in China.
+            if github_repo:
+                if not is_chinese_project(github_repo, github_token):
+                    print(
+                        f"    SKIP: {pid} – no Chinese top contributor found "
+                        f"(repo: {github_repo})"
+                    )
+                    continue
+                time.sleep(GITHUB_API_DELAY_BETWEEN_REPOS)  # polite pacing between repos
+
+            # Build a minimal entry; GitHub URL may need manual correction.
             # 'branch' defaults to 'master'; maintainers should update it if the repo
             # uses 'main' or another default branch.
             # 'auto_detected' is persisted so reviewers can identify entries that
-            # have not yet been manually verified as genuine China .NET community projects.
+            # have not yet been fully verified.
             new_entry = {
                 "name": pid,
                 "nuget_id": pid,
-                "github": "",
+                "github": github_repo,
                 "branch": "master",
                 "auto_detected": True,
                 "total_downloads": downloads,
