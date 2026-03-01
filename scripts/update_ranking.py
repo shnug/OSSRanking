@@ -1,0 +1,263 @@
+#!/usr/bin/env python3
+"""
+Automatically detect new China .NET community projects and update the ranking.
+
+This script:
+1. Reads projects.json to get currently tracked packages and known Chinese NuGet owners.
+2. Queries the NuGet Search API to discover new packages published by known owners
+   that have at least MIN_DOWNLOADS total downloads.
+3. Appends any newly discovered packages to projects.json.
+4. Regenerates the README.md ranking section, sorted by total NuGet downloads (descending).
+"""
+
+import json
+import re
+import sys
+import time
+from pathlib import Path
+
+try:
+    import requests
+except ImportError:
+    print("requests library not found. Install it with: pip install requests", file=sys.stderr)
+    sys.exit(1)
+
+# Minimum total NuGet downloads required to appear in the ranking
+MIN_DOWNLOADS = 20_000
+
+NUGET_SEARCH_URL = "https://azuresearch-usnc.nuget.org/query"
+
+# Shields.io badge org labels (nuget_id -> badge label+colour)
+ORG_BADGES = {
+    "dotnetcore": "![.NET Core Community](https://img.shields.io/badge/NCC-9e20c9.svg)",
+    "SciSharp": "![SciSharp](https://img.shields.io/badge/SCISHARP-865fc3.svg)",
+    "NewLifeX": "![NewLife](https://img.shields.io/badge/NEWLIFE-a6ca4d.svg)",
+    "mini-software": "![.NET Foundation](https://img.shields.io/badge/DNF-2b0b98.svg)",
+    "masastack": "",
+    "ant-design-blazor": "![.NET Foundation](https://img.shields.io/badge/DNF-2b0b98.svg)",
+    "arch": "![Arch](https://img.shields.io/badge/Arch-865f00.svg)",
+}
+
+
+def get_nuget_stats(package_id: str) -> int:
+    """Return total download count for a single NuGet package, or 0 on failure."""
+    try:
+        resp = requests.get(
+            NUGET_SEARCH_URL,
+            params={"q": f"PackageId:{package_id}", "prerelease": "false", "take": 5},
+            timeout=15,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        for pkg in data.get("data", []):
+            if pkg.get("id", "").lower() == package_id.lower():
+                return pkg.get("totalDownloads", 0)
+    except Exception as exc:
+        print(f"  Warning: could not fetch stats for {package_id}: {exc}", file=sys.stderr)
+    return 0
+
+
+def search_nuget_by_owner(owner: str) -> list:
+    """Return all NuGet packages (with totalDownloads) published by *owner*."""
+    packages = []
+    skip = 0
+    while True:
+        try:
+            resp = requests.get(
+                NUGET_SEARCH_URL,
+                params={"q": f"owner:{owner}", "take": 100, "skip": skip, "prerelease": "false"},
+                timeout=15,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+        except Exception as exc:
+            print(f"  Warning: NuGet search failed for owner '{owner}': {exc}", file=sys.stderr)
+            break
+
+        batch = data.get("data", [])
+        packages.extend(batch)
+        if len(batch) < 100:
+            break
+        skip += 100
+        time.sleep(0.2)  # be polite to the API
+
+    return packages
+
+
+def build_entry(pkg: dict) -> str:
+    """Build a README markdown list entry for *pkg*."""
+    name = pkg["name"]
+    nuget_id = pkg["nuget_id"]
+    github = pkg.get("github", "")
+    branch = pkg.get("branch", "master")
+    downloads = pkg.get("total_downloads", 0)
+
+    nuget_version_badge = (
+        f"[![NuGet Version](https://img.shields.io/nuget/v/{nuget_id}.svg?style=flat)]"
+        f"(https://www.nuget.org/packages/{nuget_id}/)"
+    )
+    nuget_download_badge = (
+        f"[![NuGet](https://img.shields.io/nuget/dt/{nuget_id})]"
+        f"(https://www.nuget.org/packages/{nuget_id})"
+    )
+
+    stars_badge = ""
+    last_commit_badge = ""
+    if github:
+        stars_badge = (
+            f'<img alt="Stars" src="https://img.shields.io/github/stars/{github}'
+            f'?style=flat-square&labelColor=343b41"/>'
+        )
+        last_commit_badge = (
+            f"[![last commit](https://img.shields.io/github/last-commit/{github}/{branch})]"
+            f"(https://github.com/{github})"
+        )
+
+    # Determine org badge if any
+    org_badge = ""
+    if github:
+        org = github.split("/")[0]
+        org_badge = ORG_BADGES.get(org, "")
+
+    parts = [f"- {name}", nuget_version_badge, nuget_download_badge]
+    if stars_badge:
+        parts.append(stars_badge)
+    if downloads:
+        # Format downloads as a human-readable badge value
+        if downloads >= 1_000_000:
+            dl_label = f"{downloads / 1_000_000:.1f}M"
+        elif downloads >= 1_000:
+            dl_label = f"{downloads / 1_000:.0f}k"
+        else:
+            dl_label = str(downloads)
+        parts.append(f"![Total Downloads](https://img.shields.io/badge/totalDownloads-{dl_label}-blue)")
+    if org_badge:
+        parts.append(org_badge)
+    if last_commit_badge:
+        parts.append(last_commit_badge)
+
+    return " ".join(parts)
+
+
+def update_readme(packages_with_stats: list, readme_path: Path) -> None:
+    """Rewrite the ranking section of README.md with *packages_with_stats* sorted by downloads."""
+    with open(readme_path, encoding="utf-8") as f:
+        content = f.read()
+
+    # The ranking list starts after "# 中国.NET开源项目排行榜 China .NET OSS Ranking"
+    # and the [Rank by Org] link, and ends at the last list item.
+    # Note: "Orgnization" is an existing typo in README.md that must be preserved here.
+    header_pattern = re.compile(
+        r"(# 中国\.NET开源项目排行榜 China \.NET OSS Ranking\n\n"
+        r"\[点击这里按组织排名 Rank by Orgnization\]\(RankingByOrg\.md\)\n"
+        r" \n)"
+        r"((?:- .+\n?)+)",
+        re.MULTILINE,
+    )
+
+    qualifying = [p for p in packages_with_stats if p.get("total_downloads", 0) >= MIN_DOWNLOADS]
+    qualifying.sort(key=lambda p: p.get("total_downloads", 0), reverse=True)
+
+    new_list = "\n".join(build_entry(p) for p in qualifying) + "\n"
+
+    def replace_section(m):
+        return m.group(1) + new_list
+
+    new_content, n = header_pattern.subn(replace_section, content)
+    if n == 0:
+        print("Warning: could not locate ranking section in README.md – skipping rewrite.", file=sys.stderr)
+        return
+
+    with open(readme_path, "w", encoding="utf-8") as f:
+        f.write(new_content)
+
+    print(f"README.md updated with {len(qualifying)} packages.")
+
+
+def main() -> None:
+    root = Path(__file__).resolve().parent.parent
+    projects_path = root / "projects.json"
+    readme_path = root / "README.md"
+
+    with open(projects_path, encoding="utf-8") as f:
+        config = json.load(f)
+
+    tracked: list = config["packages"]
+    tracked_lower: set = {p["nuget_id"].lower() for p in tracked}
+
+    # ------------------------------------------------------------------ #
+    # 1. Fetch current download counts for all already-tracked packages   #
+    # ------------------------------------------------------------------ #
+    print("Fetching download counts for tracked packages …")
+    for pkg in tracked:
+        downloads = get_nuget_stats(pkg["nuget_id"])
+        pkg["total_downloads"] = downloads
+        print(f"  {pkg['nuget_id']}: {downloads:,}")
+        time.sleep(0.1)
+
+    # ------------------------------------------------------------------ #
+    # 2. Discover new packages from known NuGet owners                    #
+    # ------------------------------------------------------------------ #
+    print("\nSearching NuGet for new packages from known owners …")
+    newly_added: list = []
+
+    for owner in config.get("nuget_owners", []):
+        print(f"  Scanning owner: {owner}")
+        results = search_nuget_by_owner(owner)
+        for pkg_data in results:
+            pid = pkg_data.get("id", "")
+            downloads = pkg_data.get("totalDownloads", 0)
+            if pid.lower() in tracked_lower:
+                continue
+            if downloads < MIN_DOWNLOADS:
+                continue
+            # Build a minimal entry; GitHub URL is unknown until manually verified.
+            # 'branch' defaults to 'master'; maintainers should update it if the repo
+            # uses 'main' or another default branch.
+            # 'auto_detected' is persisted so reviewers can identify entries that
+            # have not yet been manually verified as genuine China .NET community projects.
+            new_entry = {
+                "name": pid,
+                "nuget_id": pid,
+                "github": "",
+                "branch": "master",
+                "auto_detected": True,
+                "total_downloads": downloads,
+            }
+            tracked.append(new_entry)
+            tracked_lower.add(pid.lower())
+            newly_added.append(new_entry)
+            print(f"    NEW: {pid} ({downloads:,} downloads)")
+
+    # ------------------------------------------------------------------ #
+    # 3. Persist updated projects.json                                    #
+    # ------------------------------------------------------------------ #
+    # Strip runtime-only fields before saving (keep auto_detected for human review)
+    save_packages = []
+    for p in tracked:
+        entry = {k: v for k, v in p.items() if k not in ("total_downloads",)}
+        save_packages.append(entry)
+
+    config["packages"] = save_packages
+    with open(projects_path, "w", encoding="utf-8") as f:
+        json.dump(config, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+    # ------------------------------------------------------------------ #
+    # 4. Rewrite README.md ranking section                                #
+    # ------------------------------------------------------------------ #
+    print("\nUpdating README.md …")
+    update_readme(tracked, readme_path)
+
+    if newly_added:
+        print(f"\n✅ {len(newly_added)} new package(s) detected and added to projects.json:")
+        for p in newly_added:
+            print(f"   - {p['nuget_id']} ({p['total_downloads']:,} downloads)")
+        print("\nNote: Please verify these new packages are genuine China .NET community projects")
+        print("and update their 'github' field in projects.json before merging.")
+    else:
+        print("\n✅ No new qualifying packages found.")
+
+
+if __name__ == "__main__":
+    main()
