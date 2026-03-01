@@ -358,6 +358,12 @@ def main() -> None:
 
     tracked: list = config["packages"]
     tracked_lower: set = {p["nuget_id"].lower() for p in tracked}
+    excluded_ids_lower: set = {
+        eid.lower() for eid in config.get("excluded_nuget_ids", [])
+    }
+    excluded_prefixes_lower: tuple = tuple(
+        pfx.lower() for pfx in config.get("excluded_nuget_id_prefixes", [])
+    )
 
     # ------------------------------------------------------------------ #
     # 1. Fetch current download counts for all already-tracked packages   #
@@ -385,6 +391,12 @@ def main() -> None:
         for pkg_data in results:
             pid = pkg_data.get("id", "")
             downloads = pkg_data.get("totalDownloads", 0)
+            # Check exclusion lists first so company/unwanted packages are filtered
+            # regardless of whether they appear in tracked or candidate lists.
+            if pid.lower() in excluded_ids_lower:
+                continue
+            if excluded_prefixes_lower and pid.lower().startswith(excluded_prefixes_lower):
+                continue
             if pid.lower() in tracked_lower or pid.lower() in candidate_ids_lower:
                 continue
             if downloads < MIN_DOWNLOADS:
