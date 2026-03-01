@@ -85,12 +85,6 @@
       "branch": "master"
     },
     {
-      "name": "Senparc.Weixin",
-      "nuget_id": "Senparc.Weixin",
-      "github": "JeffreySu/WeiXinMPSDK",
-      "branch": "master"
-    },
-    {
       "name": "NumSharp",
       "nuget_id": "NumSharp",
       "github": "SciSharp/NumSharp",
@@ -454,58 +448,9 @@
       "auto_detected": true
     },
     {
-      "name": "Senparc.CO2NET",
-      "nuget_id": "Senparc.CO2NET",
-      "github": "Senparc/Senparc.CO2NET",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
-      "name": "Senparc.NeuChar",
-      "nuget_id": "Senparc.NeuChar",
-      "github": "Senparc/NeuChar",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
-      "name": "Senparc.WebSocket",
-      "nuget_id": "Senparc.WebSocket",
-      "github": "JeffreySu/WeiXinMPSDK",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
-      "name": "Senparc.Xncf.XncfBuilder.Template",
-      "nuget_id": "Senparc.Xncf.XncfBuilder.Template",
-      "github": "NeuCharFramework/NcfPackageSources",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
-      "name": "Senparc.NCF.Template",
-      "nuget_id": "Senparc.NCF.Template",
-      "github": "NeuCharFramework/NCF",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
       "name": "DPB",
       "nuget_id": "DPB",
       "github": "JeffreySu/WeiXinMPSDK",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
-      "name": "Senparc.AI",
-      "nuget_id": "Senparc.AI",
-      "github": "Senparc/Senparc.AI",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
-      "name": "Senparc.Xncf.PromptRange",
-      "nuget_id": "Senparc.Xncf.PromptRange",
-      "github": "NeuCharFramework/NcfPackageSources",
       "branch": "master",
       "auto_detected": true
     },
@@ -629,13 +574,6 @@
       "auto_detected": true
     },
     {
-      "name": "PaySharp.Alipay",
-      "nuget_id": "PaySharp.Alipay",
-      "github": "Varorbc/PaySharp",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
       "name": "Hangfire.MySql.Core",
       "nuget_id": "Hangfire.MySql.Core",
       "github": "stulzq/Hangfire.MySql.Core",
@@ -678,13 +616,6 @@
       "auto_detected": true
     },
     {
-      "name": "Alipay.AopSdk.Core",
-      "nuget_id": "Alipay.AopSdk.Core",
-      "github": "stulzq/Alipay.AopSdk.Core",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
       "name": "XC.Framework.Security.RSAUtil",
       "nuget_id": "XC.Framework.Security.RSAUtil",
       "github": "stulzq/RSAUtil",
@@ -702,13 +633,6 @@
       "name": "NConsul",
       "nuget_id": "NConsul",
       "github": "stulzq/NConsul",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
-      "name": "Alipay.AopSdk.AspnetCore",
-      "nuget_id": "Alipay.AopSdk.AspnetCore",
-      "github": "stulzq/Alipay.AopSdk.Core",
       "branch": "master",
       "auto_detected": true
     },
@@ -744,13 +668,6 @@
       "name": "Unicorn.AspNetCore",
       "nuget_id": "Unicorn.AspNetCore",
       "github": "UCPlan/Unicorn",
-      "branch": "master",
-      "auto_detected": true
-    },
-    {
-      "name": "Alipay.AopSdk.F2FPay",
-      "nuget_id": "Alipay.AopSdk.F2FPay",
-      "github": "stulzq/Alipay.AopSdk.Core",
       "branch": "master",
       "auto_detected": true
     },
@@ -860,7 +777,6 @@
     "2881099",
     "myloveCc",
     "donnytian",
-    "JeffreySu",
     "lextudio",
     "doghappy",
     "SciSharp",
@@ -919,10 +835,13 @@
     "casbin"
   ],
   "excluded_nuget_ids": [
-    "BlazorComponent"
+    "BlazorComponent",
+    "PaySharp.Alipay"
   ],
   "excluded_nuget_id_prefixes": [
+    "Alipay.",
+    "Com.Ctrip.",
     "Masa.",
-    "Com.Ctrip."
+    "Senparc."
   ]
 }
